@@ -3,11 +3,11 @@ package com.javabasic.lesson02;
 public class Task02 {
 
 	public static void main(String[] args) {
-		String northLatitude = "50°03′57″ N";
-		String eastLongitude = "35°09′45″ Е";
+		String northlatitude = "50°03′57″ N";
+		String eastlongitude = "35°09′45″ Е";
 		System.out.println("Geographical coordinates Krasnokutsk:");
-		System.out.println("longitude: " + northLatitude);
-		System.out.println("latitude:  " + eastLongitude);
+		System.out.println("longitude: " + northlatitude);
+		System.out.println("latitude:  " + eastlongitude);
 	}
 
 }

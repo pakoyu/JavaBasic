@@ -1,6 +1,6 @@
 package com.javabasic.lesson03;
 
-public class Classwork {
+public class TypeCasting {
 	public static void main(String[] args) {
 		byte b = 127;
 		System.out.println("byte : " + b);
@@ -17,5 +17,9 @@ public class Classwork {
 		b = 127;
 		b = (byte) (b + 1);
 		System.out.println("byte : " + b);
+		float f = 42.42424242F;
+		byte floattobyte  = (byte) f;
+		System.out.println("floattobyte : " + floattobyte);
+		
 	}
 }
