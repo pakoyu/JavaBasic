@@ -1,4 +1,4 @@
-package com.javabasic.lesson02;
+package com.javabasic.lesson02.homework;
 
 public class Task01 {
 
