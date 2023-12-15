@@ -27,5 +27,6 @@ replay_pid*
 *.iml
 /bin/
 /out/
+/.settings/
 *.classpath
 *.project
