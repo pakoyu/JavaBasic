@@ -20,12 +20,12 @@ public class Task02 {
 
 	public static void main(String[] args) throws IOException {
 		setSizeBaggage();
-		getTypeBaggage();
+		printTypeBaggage();
 	}
 
-	static void getTypeBaggage() {
-		if ((verifySizeBaggage(MAX_HEIGHT_BAG, MAX_WIDTH_BAG, MAX_DEPTH_BAG))
-				| (verifySizeBaggage(MAX_HEIGHT_CASE, MAX_WIDTH_CASE, MAX_DEPTH_CASE))) {
+	static void printTypeBaggage() {
+		if ((isSizeBaggageCorrect(MAX_HEIGHT_BAG, MAX_WIDTH_BAG, MAX_DEPTH_BAG))
+				| (isSizeBaggageCorrect(MAX_HEIGHT_CASE, MAX_WIDTH_CASE, MAX_DEPTH_CASE))) {
 			System.out.println("This baggage meets the standards of hand luggage.");
 		} else {
 			System.out.println("This baggage does not fit the standards of hand luggage.");
@@ -44,7 +44,7 @@ public class Task02 {
 		return Integer.parseInt(reader.readLine());
 	}
 
-	static boolean verifySizeBaggage(int maxHeight, int maxWidth, int maxDepth) {
+	static boolean isSizeBaggageCorrect(int maxHeight, int maxWidth, int maxDepth) {
 		return heightBaggage <= maxHeight & widthBaggage <= maxWidth & depthBaggage <= maxDepth;
 	}
 }

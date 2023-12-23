@@ -8,22 +8,22 @@ public class Task01 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the grade for the first subject:");
-        Integer sub1 = Integer.parseInt(reader.readLine());
+        Integer gradeSubject1 = Integer.parseInt(reader.readLine());
         System.out.println("Enter your grade for the second subject:");
-        Integer sub2 = Integer.parseInt(reader.readLine());
+        Integer gradeSubject2 = Integer.parseInt(reader.readLine());
         System.out.println("Enter the grade for the third subject:");
-        Integer sub3 = Integer.parseInt(reader.readLine());
+        Integer gradeSubject3 = Integer.parseInt(reader.readLine());
         System.out.println("Enter the grade for the fourth subject:");
-        Integer sub4 = Integer.parseInt(reader.readLine());
+        Integer gradeSubject4 = Integer.parseInt(reader.readLine());
         System.out.println("Enter the grade for the fifth subject:");
-        Integer sub5 = Integer.parseInt(reader.readLine());
+        Integer gradeSubject5 = Integer.parseInt(reader.readLine());
 
-        float gpa = (float) (sub1 + sub2 + sub3 + sub4 + sub5) / 5;
-        System.out.println("Grade point average: " + gpa);
+        float gradePointAverage  = (float) (gradeSubject1 + gradeSubject2 + gradeSubject3 + gradeSubject4 + gradeSubject5) / 5;
+        System.out.println("Grade point average: " + gradePointAverage);
 
-        if (gpa >= 10) {
+        if (gradePointAverage >= 10) {
             System.out.println("Enhanced stipend");
-        } else if (gpa >= 8) {
+        } else if (gradePointAverage>= 8) {
             System.out.println("Just a stipend");
         } else {
             System.out.println("No stipend");
