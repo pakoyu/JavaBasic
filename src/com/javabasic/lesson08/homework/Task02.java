@@ -21,7 +21,8 @@ public class Task02 {
         }
 
         String[]  strings1 = new String[numberOfArray/2];
-        String[]  strings2 = new String[numberOfArray - numberOfArray/2];
+//        String[]  strings2 = new String[numberOfArray - numberOfArray/2];
+        String[]  strings2 = new String[numberOfArray - strings1.length];
 
         for (int i = 0; i < strings.length; i++) {
             if (i < strings1.length) {
