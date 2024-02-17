@@ -8,9 +8,10 @@ public class Task01 {
 
     public static void main(String[] args) {
 
-        Integer[][] teams = new Integer[][]{
-                new Integer[numberOfPlayers],
-                new Integer[numberOfPlayers]
+        int[][] teams = new int[][]{
+                new int[numberOfPlayers],
+                new int[numberOfPlayers],
+                new int[numberOfPlayers],
         };
 
         setAgePlayers(teams, minAgePlayers, maxAgePlayers);
@@ -21,15 +22,16 @@ public class Task01 {
 
     }
 
-    public static void printMaxAverageAge(Integer[][] teams) {
-        Integer[] averageAgeTeams = new Integer[teams.length];
+    public static void printMaxAverageAge(int[][] teams) {
+        int[] averageAgeTeams = new int[teams.length];
 
         for (int a = 0; a < teams.length; a++) {
             averageAgeTeams[a] = averageValueArray(teams[a]);
         }
         if (!isEqualValuesArray(averageAgeTeams)) {
             for (int i = 0; i < averageAgeTeams.length; i++) {
-                if (averageAgeTeams[i].equals(maxValueArray(averageAgeTeams))) {
+//                if (averageAgeTeams[i].equals(maxValueArray(averageAgeTeams))) {
+                if (averageAgeTeams[i] == maxValueArray(averageAgeTeams)) {
                     System.out.println(
                             "Team " + (i + 1) + " has max age of players - " +
                                     averageAgeTeams[i] + " years");
@@ -41,22 +43,22 @@ public class Task01 {
     }
 
 
-    public static void printAgePlayers(Integer[][] teams) {
+    public static void printAgePlayers(int[][] teams) {
         for (int i = 0; i < teams.length; i++) {
             System.out.print("Age of the players of the team " + (i + 1) + " - ");
             printArray(teams[i]);
         }
     }
 
-    public static void setAgePlayers(Integer[][] teams, int min, int max) {
-        for (Integer[] array : teams) {
+    public static void setAgePlayers(int[][] teams, int min, int max) {
+        for (int[] array : teams) {
             for (int i = 0; i < array.length; i++) {
                 array[i] = randomInt(min, max);
             }
         }
     }
 
-    public static void printArray(Integer[] array) {
+    public static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
             if (i < array.length - 1) {
@@ -68,15 +70,15 @@ public class Task01 {
         System.out.println();
     }
 
-    public static int sumValuesArray(Integer[] array) {
+    public static int sumValuesArray(int[] array) {
         int sum = 0;
-        for (Integer integer : array) {
-            sum += integer;
+        for (int i : array) {
+            sum += i;
         }
         return sum;
     }
 
-    public static Integer averageValueArray(Integer[] array) {
+    public static int averageValueArray(int[] array) {
         return sumValuesArray(array) / array.length;
     }
 
@@ -84,7 +86,7 @@ public class Task01 {
         return (int) ((Math.random() * (max - min)) + min);
     }
 
-    public static Integer maxValueArray(Integer[] array) {
+    public static int maxValueArray(int[] array) {
         int max = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
@@ -94,7 +96,7 @@ public class Task01 {
         return max;
     }
 
-    public static Boolean isEqualValuesArray(Integer[] array) {
+    public static Boolean isEqualValuesArray(int[] array) {
         int val = array[0];
         for (int i = 0; i < array.length; i++) {
             if (val != array[i]) {

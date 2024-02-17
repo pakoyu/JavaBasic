@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task02 {
-    public static final int numberOfArray = 20;
+    public static final int numberOfArray = 21;
 
     public static final BufferedReader READER = new BufferedReader(
             new InputStreamReader(System.in)
